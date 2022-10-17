@@ -3,30 +3,39 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 using TMPro;
+using UnityEngine.SceneManagement;
 public class BattleManager : MonoBehaviour
 {
    
     public GameObject canvas;
     public GameObject desactivadorCanvas;
     public Animator battleAnims;
-    public void AmorSelection()
+    public void RestartScene()
     {
-        battleAnims.SetTrigger("Seduccion");
-        camaraSeduccion.SetActive(true);
-        camaraAtaque.SetActive(false);
-        principalCamera.SetActive(false);
-        canvas.SetActive(false);
+        SceneManager.LoadScene(0);
+
     }
-    public GameObject camaraAtaque;
-    public GameObject camaraSeduccion;
-    public GameObject principalCamera;
-    public void AtackSelection()
+    public void ReallyrESTASRT()
     {
-        principalCamera.SetActive(false);
-        camaraSeduccion.SetActive(false);
-        camaraAtaque.SetActive(true);
-        battleAnims.SetTrigger("Attack");
+        gameover.SetActive(true);
     }
+    public void Ataque()
+    {
+        seleccionAtque(0);
+    }
+    public void Defensa()
+    {
+        seleccionAtque(2);
+    }
+    public void seducir()
+    {
+        seleccionAtque(1);
+    }
+    public void pocion()
+    {
+        seleccionAtque(3);
+    }
+    public GameObject gameover;
     #region seleccion  de combate
     private void Update()
     {
@@ -45,7 +54,22 @@ public class BattleManager : MonoBehaviour
                 rondas++;
             }
         }
+
+
+        if(Playervida >= 3)
+        {
+            Playervida = 3;
+        }
+        if(Playervida<= 0)
+        {
+            if(!died)
+            {
+                died = true;
+            Invoke("ReallyrESTASRT", 3);
+            }
+        }
     }
+    private bool died = false;
     public TextMeshProUGUI rondasTXT;
     public TextMeshProUGUI turnosTXT;
 
@@ -125,7 +149,12 @@ public class BattleManager : MonoBehaviour
             battleAnims.SetTrigger("Seduccion vs Defensa");
             EnemyVida--;
         }
-
+        if(_seleccionPlayer == 3)
+        {
+            Playervida++;
+            canvas.SetActive(false);
+            canvas.SetActive(true);
+        }
         turnos++;
     }
 

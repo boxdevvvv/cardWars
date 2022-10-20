@@ -118,34 +118,34 @@ AnimatorStateMachine:
     m_Position: {x: -70, y: 290, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 7803290801552198190}
-    m_Position: {x: -560, y: -20, z: 0}
+    m_Position: {x: -640, y: 250, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5267494038761054528}
-    m_Position: {x: -600, y: 80, z: 0}
+    m_Position: {x: -680, y: 350, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4734875728641718798}
-    m_Position: {x: -640, y: 560, z: 0}
+    m_Position: {x: -670, y: 530, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8635930378973924929}
-    m_Position: {x: -600, y: 670, z: 0}
+    m_Position: {x: -580, y: 590, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 578740040029721904}
-    m_Position: {x: -100, y: 730, z: 0}
+    m_Position: {x: -160, y: 600, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5786639201301562425}
-    m_Position: {x: 130, y: 710, z: 0}
+    m_Position: {x: 60, y: 610, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4973987967728448512}
-    m_Position: {x: 380, y: 630, z: 0}
+    m_Position: {x: 290, y: 580, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8701872878712761926}
-    m_Position: {x: -610, y: 170, z: 0}
+    m_Position: {x: -690, y: 440, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6194622868475867345}
-    m_Position: {x: -450, y: 740, z: 0}
+    m_Position: {x: -370, y: 600, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4689089079484010596}
-    m_Position: {x: 340, y: 300, z: 0}
+    m_Position: {x: 310, y: 370, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -453,61 +453,61 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Attack Vs Defense
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Attack vs seduccion
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Defensa vs Defensa
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Defensa vs Ataque
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Defensa vs Seduccion
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Seduccion Vs Ataque
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Seduccion vs Seduccion
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Seduccion vs Defensa
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: OutEnemy
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer

@@ -10,10 +10,11 @@ public class BattleManager : MonoBehaviour
     public GameObject canvas;
     public GameObject desactivadorCanvas;
     public Animator battleAnims;
+
+
     public void RestartScene()
     {
         SceneManager.LoadScene(0);
-
     }
     public void ReallyrESTASRT()
     {
@@ -36,7 +37,16 @@ public class BattleManager : MonoBehaviour
         seleccionAtque(3);
     }
     public GameObject gameover;
+    private void Start()
+    {
+        enemigoSalido = Random.Range(0, 2);
+        print(enemigoSalido);
+        RestartEnemy();
+    }
+    public int enemigoSalido;
     #region seleccion  de combate
+
+
     private void Update()
     {
         vidaPlayer.text = "Vida " + Playervida + "/3";
@@ -72,13 +82,35 @@ public class BattleManager : MonoBehaviour
     private bool died = false;
     public TextMeshProUGUI rondasTXT;
     public TextMeshProUGUI turnosTXT;
-
     private bool activadoRestart = false;
+    public GameObject[] enemys;
+    public RuntimeAnimatorController[] animaciones;
+    
     public void RestartEnemy()
     {
+        enemigoSalido = Random.Range(0, 2);
+        enemys[0].SetActive(false);
+        enemys[1].SetActive(false);
+
+        if(enemigoSalido ==1)
+        {
+            battleAnims = enemys[enemigoSalido].GetComponent<Animator>();
+            enemys[enemigoSalido].SetActive(true);
+        }
+        if
+        (enemigoSalido == 0)
+        {
+            battleAnims = enemys[enemigoSalido].GetComponent<Animator>();
+
+            enemys[enemigoSalido].SetActive(true);
+
+        }
         canvas.SetActive(true);
         EnemyVida = 3;
         activadoRestart = false;
+
+
+        print(enemigoSalido);
     }
 
 
@@ -95,7 +127,7 @@ public class BattleManager : MonoBehaviour
     {
         cartaEnemigo = Random.Range(0, 3);
         canvas.SetActive(false);
-        Invoke("EnableCanvas", 3);
+        Invoke("EnableCanvas", 5);
 
         if (_seleccionPlayer == 0 && cartaEnemigo == 0)
         {
